@@ -1,0 +1,10 @@
+<div class="topnav">
+    <div *ngFor = "let tempShop of shop ; let i = index"
+    [class.active]="selectedIndex === i"
+    (click) = "setIndex(i)">
+    <a routerLink="./shop/{{tempShop.shop_id}}" routerLinkActive = "active-link" >{{tempShop.shop_group}}</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+  
